@@ -8,10 +8,10 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 
 import spring.ioc.bean.Grade;
-import spring.ioc.bean.Student;
 @SpringBootApplication
 @ComponentScan(basePackages = "spring.ioc.bean")
-@ImportResource({ "classpath*:spring/**/*-config*.xml" })
+@ImportResource({ "classpath*:spring/**/*-config*.xml","classpath:config/spring_bean.xml" })
+
 public class SpringIocDemoBoot implements CommandLineRunner {
 
 	@Override
@@ -25,6 +25,8 @@ public class SpringIocDemoBoot implements CommandLineRunner {
 		//Student stu = grade.getStudent();
 		
 		System.out.println(grade);
+		
+		ctx.close();
 		
 	}
 }

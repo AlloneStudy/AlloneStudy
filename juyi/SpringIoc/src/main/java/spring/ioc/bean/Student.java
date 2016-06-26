@@ -1,12 +1,12 @@
 package spring.ioc.bean;
 
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype")
 public class Student {
+
 	private String name;
+
 	private int age;
 
 	public String getName() {
@@ -25,4 +25,7 @@ public class Student {
 		this.age = age;
 	}
 
+	public String toString() {
+		return "Student:name=" + name + ",age=" + age;
+	}
 }
