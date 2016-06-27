@@ -10,7 +10,10 @@ import org.springframework.context.annotation.ImportResource;
 import spring.ioc.bean.Grade;
 @SpringBootApplication
 @ComponentScan(basePackages = "spring.ioc.bean")
-@ImportResource({ "classpath*:spring/**/*-config*.xml","classpath:config/spring_bean.xml" })
+@ImportResource({ 
+	"classpath:config/spring_bean.xml",
+	"classpath:config/customer_bean.xml" 	
+})
 
 public class SpringIocDemoBoot implements CommandLineRunner {
 
@@ -26,7 +29,7 @@ public class SpringIocDemoBoot implements CommandLineRunner {
 		
 		System.out.println(grade);
 		
-		ctx.close();
+		//ctx.close();
 		
 	}
 }
