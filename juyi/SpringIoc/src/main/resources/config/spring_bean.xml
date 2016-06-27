@@ -1,0 +1,46 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans  
+       http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+       http://www.springframework.org/schema/context  
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+	<context:annotation-config />
+	
+	<bean id="initSequenceBean" class="spring.ioc.bean.InitSequenceBean" init-method="initMethod" destroy-method="destroyMethod">
+		
+	</bean>
+	
+	
+	<bean id="Student_JingJing" factory-bean="studentFactory"
+		factory-method="createStudent">
+		<constructor-arg value="Student-JingJing" />
+		<property name="age" value="26"/>
+	</bean>
+	<bean id="Student_JunWen" factory-bean="studentFactory"
+		factory-method="createStudent">
+		<constructor-arg value="Student-JunWen" />
+		<property name="age" value="25"/>
+	</bean>
+
+	<bean id="Student-Static" class="spring.ioc.bean.StudentFactory"
+		factory-method="StaticCreateStudent">
+		<constructor-arg value="Student-Static" />
+	</bean>
+
+
+	<bean id="Teacher-YUWEN" factory-bean="teacherFactory"
+		factory-method="createTeacher">
+		<constructor-arg value="Teacher-YUWEN" />
+	</bean>
+	<bean id="Teacher-DAISHU" factory-bean="teacherFactory"
+		factory-method="createTeacher">
+		<constructor-arg value="Teacher-DAISHU" />
+	</bean>
+
+	<bean id="Teacher-Static" class="spring.ioc.bean.TeacherFactory"
+		factory-method="StaticCreateTeacher">
+		<constructor-arg value="Teacher-Static" />
+	</bean>
+
+</beans>  
