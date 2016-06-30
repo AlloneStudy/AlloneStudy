@@ -1,9 +1,12 @@
 package spring.ioc.bean;
 
 import org.springframework.stereotype.Component;
+<<<<<<< HEAD
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
+=======
+>>>>>>> 2af5a02769f38bb45baa54b8c5d07a6e71d6de43
 
 @Component
 public class StudentFactory {

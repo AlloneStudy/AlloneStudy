@@ -8,6 +8,10 @@
 	<context:annotation-config />
 	
 	<bean id="initSequenceBean" class="spring.ioc.bean.InitSequenceBean" init-method="initMethod" destroy-method="destroyMethod">
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 2af5a02769f38bb45baa54b8c5d07a6e71d6de43
 	</bean>
 	
 	
@@ -16,7 +20,10 @@
 		<constructor-arg value="Student-JingJing" />
 		<property name="age" value="26"/>
 	</bean>
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 2af5a02769f38bb45baa54b8c5d07a6e71d6de43
 	<bean id="Student_JunWen" factory-bean="studentFactory"
 		factory-method="createStudent">
 		<constructor-arg value="Student-JunWen" />

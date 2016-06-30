@@ -1,0 +1,137 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cc.bcee.oort</groupId>
+	<artifactId>oort-root</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<name>oort-root</name>
+
+	<properties>
+		<java.version>1.6</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<junit.version>4.11</junit.version>
+		<springfox-version>2.4.0</springfox-version>
+		<slf4j.version>1.6.6</slf4j.version>
+		<aspectj>1.8.5</aspectj>
+		<log4j.version>1.2.9</log4j.version>
+		<mybatis.version>3.2.4</mybatis.version>
+		<mybatis-spring.version>1.2.2</mybatis-spring.version>
+		<mysql-connector.version>5.1.29</mysql-connector.version>
+
+	</properties>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.3.3.RELEASE</version>
+	</parent>
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>NexusReleaseRepository</name>
+			<url>http://192.168.0.11:9527/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>NexusSnapshotRepository</name>
+			<url>http://192.168.0.11:9527/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql-connector.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!--SpringFox dependencies -->
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox-version}</version>
+			</dependency>
+
+			<!-- OORT -->
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-utils-session</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-utils-right</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-utils-topicmsg</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-coreserv-cache</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-utils-dynattr</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-utils-log</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>cc.bcee.oort</groupId>
+				<artifactId>oort-datastruct</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<modules>
+		<module>../oort-root-peripheral</module>
+		<module>../oort-root-facade</module>
+		<module>../oort-root-core</module>
+		<module>../oort-root-utils</module>
+		<module>../oort-root-monitor</module>
+		<module>../oort-datastruct</module>
+	</modules>
+</project>
