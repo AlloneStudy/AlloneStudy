@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>oort-root-utils</artifactId>
+	<packaging>pom</packaging>
+	<name>oort-root-utils</name>
+
+
+
+	<parent>
+		<groupId>cc.bcee.oort</groupId>
+		<artifactId>oort-root</artifactId>
+		<version>0.0.1</version>
+	</parent>
+
+
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<name>NexusReleaseRepository</name>
+			<url>http://192.168.0.11:9527/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<name>NexusSnapshotRepository</name>
+			<url>http://192.168.0.11:9527/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<groupId>cc.bcee.oort</groupId>
+		<artifactId>oort-datastruct</artifactId>
+	</dependencies>
+
+	<modules>
+		<module>../oort-utils-token</module>
+		<module>../oort-utils-dynattr</module>
+		<module>../oort-utils-log</module>
+		<module>../oort-utils-right</module>
+		<module>../oort-utils-topicmsg</module>
+	</modules>
+</project>
