@@ -1,0 +1,14 @@
+ 1.http://news.cnblogs.com/n/174443/       Groovy简介,使用场景
+ 2.http://developer.51cto.com/art/201507/482714_all.htm        Groovy简介,使用范围
+ 3.http://baike.baidu.com/link?url=XmMJ00Pt-27dQVmU94uM3W1kcf9jMlv5Fs6Pjt6jLcfGb-H4kZJ_af2n2PihP3j6x4aV2OKyVBE5vhVwgh-5Vq     Grovvy简介
+ 4.http://www.zhihu.com/question/23737708            Groovy简介
+ 5.http://www.zhihu.com/question/21740715               Groovy简介
+ 6.http://blog.csdn.net/kmyhy/article/details/4200563     Groovy简介
+ 7.http://www.ibm.com/developerworks/cn/education/java/j-groovy/j-groovy.html     精通Grovvy
+ 8.http://tool.oschina.net/apidocs/apidoc?api=groovy      在线Groovy文档
+ 9.http://developer.51cto.com/art/200710/58087.htm      Groovy专门学习网站
+ 10.http://blog.csdn.net/boonya/article/details/45399901    eclipse上安装Groovy插件
+ 11.http://www.iteye.com/blogs/tag/Groovy         Groovy热门博客
+ 
+ 12.eclipse集成Groovy的安装过程: http://blog.csdn.net/haigenwong/article/details/22947075
+ 
